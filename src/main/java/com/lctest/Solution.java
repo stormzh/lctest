@@ -1,11 +1,16 @@
-/**
- * Created by linzhang on 7/15/17.
- * Modified by linzhang on 7/15/17
- */
 package com.lctest;
 
-public class Solution {
-    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        return (nums1[0] + 1.0*nums2[0])/2;
+class Solution {
+    double findMedianSortedArrays(int[] nums1, int[] nums2) {
+
+        int len1 = nums1.length, len2 = nums2.length;
+        if(len1 == 0)
+            return MyMedian.medOfSortedArray(nums2);
+        if(len2 == 0)
+            return MyMedian.medOfSortedArray(nums1);
+        if(len1<=len2)
+            return MyMedian.medOfTwoSortedArray(nums1, MyMedian.reduceArray(nums1,nums2));
+        else
+            return MyMedian.medOfTwoSortedArray(nums2, MyMedian.reduceArray(nums2,nums1));
     }
 }
