@@ -20,7 +20,7 @@ class MyMedian {
         int len1 = a.length, len2 = b.length;
         if (len1 == 0)
             return medOfSortedArray(b);
-        if(len1 <=2) { // merge sort and then find Median
+        if(len1 <=3) { // merge sort and then find Median
             int[] c = new int[len1 + len2];
             System.arraycopy(a,0, c, 0,len1);
             System.arraycopy(b, 0, c, len1,len2);
@@ -28,18 +28,18 @@ class MyMedian {
             return medOfSortedArray(c);
         }
         if(len1 == len2) {
-            int[] c = new int[len1/2];
-            int[] d = new int[len1/2];
+            int[] c = new int[(len1+1)/2 + 1];
+            int[] d = new int[(len1+1)/2 + 1];
             if(medOfSortedArray(a) <= medOfSortedArray(b)) {
-                System.arraycopy(a,len1/2, c, 0,(len1+1)/2);
-                System.arraycopy(b, 0, d, 0,(len1+1)/2);
+                System.arraycopy(a,len1/2 - 1, c, 0,(len1+1)/2+1);
+                System.arraycopy(b, 0, d, 0,(len1+1)/2 +1);
             } else {
-                System.arraycopy(a,0, d, 0,(len1+1)/2);
-                System.arraycopy(b, len1/2, d, 0,(len1+1)/2);
+                System.arraycopy(a,0, c, 0,(len1+1)/2+1);
+                System.arraycopy(b, len1/2-1, d, 0,(len1+1)/2+1);
             }
             return medOfTwoSortedArray(c, d);
-        } else if(len1 ==len2 -1){
-            int k = len1 / 2;
+        } else if(len1 == len2 -1){
+            int k = (len1+1) / 2;
             int[] c = new int[k];
             int[] d = new int[k + 1];
             if (len1 % 2 == 0) { //len1=2k and len2=2k+1
@@ -51,15 +51,15 @@ class MyMedian {
                     System.arraycopy(b, 0, d, 0,k+1);
                 } else
                     return b[k];
-            } else { //len1=2k+1 and len2=2k+2
-                if (a[k] <= b[k]) {
-                    System.arraycopy(a,k, c, 0,k);
+            } else { //len1=2k-1 and len2=2k
+                if (a[k-1] <= b[k-1]) {
+                    System.arraycopy(a,k-1, c, 0,k);
                     System.arraycopy(b, 0, d, 0,k+1);
-                } else if (a[k] >= b[k + 1]) {
+                } else if (a[k-1] >= b[k]) {
                     System.arraycopy(a,0, c, 0,k);
-                    System.arraycopy(b, k, d, 0,k+1);
+                    System.arraycopy(b, k-1, d, 0,k+1);
                 } else
-                    return a[k];
+                    return a[k-1];
             }
             return medOfTwoSortedArray(c, d);
         } else { // len1 == len2-2
@@ -86,7 +86,7 @@ class MyMedian {
                     int[] c = new int[k + 1];
                     int[] d = new int[k + 3];
                     System.arraycopy(a,0, c, 0,k+1);
-                    System.arraycopy(b, k, d, 0,k+3);
+                    System.arraycopy(b, k-1, d, 0,k+3);
                     return medOfTwoSortedArray(c, d);
                 }
             }

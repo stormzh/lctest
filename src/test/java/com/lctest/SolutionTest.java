@@ -66,5 +66,36 @@ public class SolutionTest {
         trures = 7;
         System.out.println("@Test findMedianSortedArrays(): " + res + " = " + trures);
         assertTrue(trures == res);
+
+        res = sol.findMedianSortedArrays(new int[]{1,3,6,7,10,15,80}, new int[]{2,4,5,10,20,32,100});
+        trures = 8.5;
+        System.out.println("@Test findMedianSortedArrays(): " + res + " = " + trures);
+        assertTrue(trures == res);
+
+        res = sol.findMedianSortedArrays(new int[]{1,5,6,7}, new int[]{2,3,4,8,9,10});
+        trures = 5.5;
+        System.out.println("@Test findMedianSortedArrays(): " + res + " = " + trures);
+        assertTrue(trures == res);
+
+        res = sol.findMedianSortedArrays(new int[]{1,2,4}, new int[]{3,5,6,7});
+        trures = 4;
+        System.out.println("@Test findMedianSortedArrays(): " + res + " = " + trures);
+        assertTrue(trures == res);
+
+        res = sol.findMedianSortedArrays(new int[]{2,2,2}, new int[]{2,2,2,2});
+        trures = 2;
+        System.out.println("@Test findMedianSortedArrays(): " + res + " = " + trures);
+        assertTrue(trures == res);
+
+        res = sol.findMedianSortedArrays(new int[]{1,2,7}, new int[]{3,4,5,6});
+        trures = 4;
+        System.out.println("@Test findMedianSortedArrays(): " + res + " = " + trures);
+        assertTrue(trures == res);
+
+        res = sol.findMedianSortedArrays(new int[]{1,2,6,7}, new int[]{3,4,5,8});
+        trures = 4.5;
+        System.out.println("@Test findMedianSortedArrays(): " + res + " = " + trures);
+        assertTrue(trures == res);
+
     }
 }
