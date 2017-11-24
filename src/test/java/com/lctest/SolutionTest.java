@@ -1,4 +1,4 @@
-package com.lctest;
+package com.lctest_vsc;
 
 import org.junit.Test;
 import static org.junit.Assert.*;

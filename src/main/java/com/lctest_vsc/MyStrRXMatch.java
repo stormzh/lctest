@@ -1,4 +1,4 @@
-package com.lctest;
+package com.lctest_vsc;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +24,7 @@ class MyStrRXMatch {
                 int sameChar = findSameChar(a);
                 if(b.charAt(0) == '.' && b.length() == 2) // '.*'
                     return true;
-                else if(b.charAt(0) == '.' && ) {
+                else if(b.charAt(0) == '.' ) {//&& ) {
                     myStrRXMatch(a.substring(a.length()>=2?2:1), b.substring(2));
                     }
                 else {  // '?*'
@@ -50,6 +50,7 @@ class MyStrRXMatch {
                         return false;
             }
         }
+        return true; // not complete
     }
 
     //find the index of the same char at the beginning of the string a
