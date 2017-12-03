@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 class MyMaxDegreeArray {
     static int maxDegreeArray(int[] arr) {
-        int maxLen = 0;
+        int maxLen = 1, degree = 1;
         HashMap<Integer, List<Integer>> res = new HashMap<Integer, List<Integer>>();
 
         for(int i=0; i<arr.length; i++) {
@@ -18,10 +18,10 @@ class MyMaxDegreeArray {
             else 
                 res.get(arr[i]).add(i);
         }
-        int degree = 0;
+
         for (int i:res.keySet()) {
             List<Integer> iList = res.get(i);
-            int len = iList.get(degree) - iList.get(0)+1;
+            int len = iList.get(iList.size()-1) - iList.get(0)+1;
             if(iList.size() > degree) {
                 degree = iList.size();
                 maxLen = len;

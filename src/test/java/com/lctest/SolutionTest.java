@@ -216,5 +216,24 @@ public class SolutionTest {
         trueResult = 8;
         System.out.println("@Test findMaxContSum(): " + result + " = " + trueResult);
         assertTrue(trueResult == result); 
-    }       
+    }    
+    
+    @Test
+    public void maxDegreeArrayTest() {
+        Solution sol = new Solution();
+        int result = sol.maxDegreeArray(new int[]{1});
+        int trueResult = 1;
+        System.out.println("@Test maxDegreeArray(): " + result + " = " + trueResult);
+        assertTrue(trueResult == result);       
+    
+        result = sol.maxDegreeArray(new int[]{1, 2, 2, 3, 1});
+        trueResult = 2;
+        System.out.println("@Test maxDegreeArray(): " + result + " = " + trueResult);
+        assertTrue(trueResult == result); 
+
+        result = sol.maxDegreeArray(new int[]{1, 2, 2, 3, 1, 4, 2});
+        trueResult = 6;
+        System.out.println("@Test maxDegreeArray(): " + result + " = " + trueResult);
+        assertTrue(trueResult == result); 
+    } 
 }
