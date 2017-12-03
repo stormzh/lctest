@@ -28,4 +28,8 @@ class Solution {
     int findMaxContSum(int[] a) {
         return MyFindMaxContSum.findMaxContSum(a);
     }
+
+    int maxDegreeArray(int[] a) {
+        return MyMaxDegreeArray.maxDegreeArray(a);
+    }
 }
