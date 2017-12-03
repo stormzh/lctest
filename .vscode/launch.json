@@ -6,10 +6,11 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Debug (Attach)",
-            "request": "attach",
-            "hostName": "localhost",
-            "port": 0
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "name": "Debug (Launch)",
+            "startupClass": "${fileBasename}",
+            "request": "launch",
+            "cwd": "${workspaceFolder}"
         }
     ]
 }

@@ -1,4 +1,4 @@
-package com.lctest_vsc;
+package com.lctest;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -155,7 +155,7 @@ public class SolutionTest {
         assertTrue(true == result);
     }
 
-    @Test
+    //@Test
     public void strRXMatchTest() {
         Solution sol = new Solution();
         boolean result = sol.strRXMatch("aa", "a");
@@ -198,4 +198,23 @@ public class SolutionTest {
         System.out.println("@Test stringMatch(): " + result + " = " + true);
         assertTrue(true == result);
     }
+    
+    @Test
+    public void findMaxContSumTest() {
+        Solution sol = new Solution();
+        int result = sol.findMaxContSum(new int[]{-1, 0});
+        int trueResult = 0;
+        System.out.println("@Test findMaxContSum(): " + result + " = " + trueResult);
+        assertTrue(trueResult == result);       
+    
+        result = sol.findMaxContSum(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4});
+        trueResult = 6;
+        System.out.println("@Test findMaxContSum(): " + result + " = " + trueResult);
+        assertTrue(trueResult == result); 
+
+        result = sol.findMaxContSum(new int[]{1, 2, -1, -3, 4, -2, 2, 3, 1});
+        trueResult = 8;
+        System.out.println("@Test findMaxContSum(): " + result + " = " + trueResult);
+        assertTrue(trueResult == result); 
+    }       
 }

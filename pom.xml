@@ -14,6 +14,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                 <version>3.3</version>
                 <configuration>
                     <source>${jdk.version}</source>
                     <target>${jdk.version}</target>
@@ -23,7 +24,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.4.1</version>
+                <version>3.3</version>
                 <configuration>
                     <!-- get all project dependencies -->
                     <descriptorRefs>
@@ -32,7 +33,7 @@
                     <!-- MainClass in mainfest make a executable jar -->
                     <archive>
                         <manifest>
-                            <mainClass>com.microstrategy.MstrParser</mainClass>
+                            <mainClass>com.lctest</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

@@ -1,4 +1,4 @@
-package com.lctest_vsc;
+package com.lctest;
 
 import java.util.ArrayList;
 
@@ -23,5 +23,9 @@ class Solution {
     boolean strRXMatch(String a, String b) {
         //decompose b to list of strings according to the char "." or "*"
         return MyStrRXMatch.myStrRXMatch(a,b);
+    }
+
+    int findMaxContSum(int[] a) {
+        return MyFindMaxContSum.findMaxContSum(a);
     }
 }
