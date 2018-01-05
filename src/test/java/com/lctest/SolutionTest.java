@@ -202,7 +202,6 @@ public class SolutionTest {
         System.out.println("@Test stringMatch(): " + result + " = " + true);
         assertTrue(true == result);
     }
-<<<<<<< HEAD:src/test/java/com/lctest_vsc/SolutionTest.java
 
     @Test
     public void plusOneTest () {
@@ -219,12 +218,9 @@ public class SolutionTest {
             " = " + Arrays.toString(trueres));
         assertTrue(Arrays.equals(trueres, result));
     }
-
-
-=======
     
     @Test
-    public void findMaxContSumTest() {
+     public void findMaxContSumTest() {
         Solution sol = new Solution();
         int result = sol.findMaxContSum(new int[]{-1, 0});
         int trueResult = 0;
@@ -260,5 +256,4 @@ public class SolutionTest {
         System.out.println("@Test maxDegreeArray(): " + result + " = " + trueResult);
         assertTrue(trueResult == result); 
     } 
->>>>>>> 91507c5f538079afcf940a46ec548c972a8aeb25:src/test/java/com/lctest/SolutionTest.java
 }

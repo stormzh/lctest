@@ -25,6 +25,14 @@ class Solution {
         return MyStrRXMatch.myStrRXMatch(a,b);
     }
 
+    int findMaxContSum(int[] a) {
+        return MyFindMaxContSum.findMaxContSum(a);
+    }
+
+    int maxDegreeArray(int[] a) {
+        return MyMaxDegreeArray.maxDegreeArray(a);
+    }
+
     int[] plusOne(int [] a) {
         return MyPlusOne.plusOne(a);
     }
