@@ -3,6 +3,10 @@ package com.lctest_vsc;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+
+import org.junit.Assert;
+
 /**
  * Created by linzhang on 7/15/17.
  * Modified by linzhang on 7/15/17
@@ -198,4 +202,22 @@ public class SolutionTest {
         System.out.println("@Test stringMatch(): " + result + " = " + true);
         assertTrue(true == result);
     }
+
+    @Test
+    public void plusOneTest () {
+        Solution sol = new Solution();
+        int[] result = sol.plusOne(new int[]{1,2,9});
+        int[] trueres = {1,3,0};
+        System.out.println("@Test plusOne(): " + Arrays.toString(result) + 
+            " = " + Arrays.toString(trueres));
+        assertTrue(Arrays.equals(trueres, result));
+    
+        result = sol.plusOne(new int[]{9,9,9});
+        trueres = new int[]{1,0,0,0};
+        System.out.println("@Test plusOne(): " + Arrays.toString(result) + 
+            " = " + Arrays.toString(trueres));
+        assertTrue(Arrays.equals(trueres, result));
+    }
+
+
 }

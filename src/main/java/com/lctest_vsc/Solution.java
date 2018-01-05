@@ -1,6 +1,6 @@
 package com.lctest_vsc;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 class Solution {
     double findMedianSortedArrays(int[] nums1, int[] nums2) {
@@ -23,5 +23,9 @@ class Solution {
     boolean strRXMatch(String a, String b) {
         //decompose b to list of strings according to the char "." or "*"
         return MyStrRXMatch.myStrRXMatch(a,b);
+    }
+
+    int[] plusOne(int [] a) {
+        return MyPlusOne.plusOne(a);
     }
 }
