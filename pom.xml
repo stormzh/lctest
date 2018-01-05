@@ -8,18 +8,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <groupId>GroupId</groupId>
-    <artifactId>lctest_vsc</artifactId>
+    <artifactId>lctest</artifactId>
     <version>1.0</version>
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-<<<<<<< HEAD
-                <version>2.3.2</version>
-=======
                  <version>3.3</version>
->>>>>>> 91507c5f538079afcf940a46ec548c972a8aeb25
                 <configuration>
                     <source>${jdk.version}</source>
                     <target>${jdk.version}</target>

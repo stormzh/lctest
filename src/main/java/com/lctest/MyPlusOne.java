@@ -1,4 +1,4 @@
-package com.lctest_vsc;
+package com.lctest;
 
 class MyPlusOne {
     public static int[] plusOne(int[] digits) {

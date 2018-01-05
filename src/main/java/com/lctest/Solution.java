@@ -25,16 +25,7 @@ class Solution {
         return MyStrRXMatch.myStrRXMatch(a,b);
     }
 
-<<<<<<< HEAD:src/main/java/com/lctest_vsc/Solution.java
     int[] plusOne(int [] a) {
         return MyPlusOne.plusOne(a);
-=======
-    int findMaxContSum(int[] a) {
-        return MyFindMaxContSum.findMaxContSum(a);
-    }
-
-    int maxDegreeArray(int[] a) {
-        return MyMaxDegreeArray.maxDegreeArray(a);
->>>>>>> 91507c5f538079afcf940a46ec548c972a8aeb25:src/main/java/com/lctest/Solution.java
     }
 }
