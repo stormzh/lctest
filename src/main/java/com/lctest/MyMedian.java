@@ -1,4 +1,4 @@
-package com.lctest_vsc;
+package com.lctest;
 
 import java.util.Arrays;
 /**

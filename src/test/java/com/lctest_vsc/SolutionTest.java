@@ -1,4 +1,4 @@
-package com.lctest_vsc;
+package com.lctest;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -159,7 +159,7 @@ public class SolutionTest {
         assertTrue(true == result);
     }
 
-    @Test
+    //@Test
     public void strRXMatchTest() {
         Solution sol = new Solution();
         boolean result = sol.strRXMatch("aa", "a");
@@ -202,6 +202,7 @@ public class SolutionTest {
         System.out.println("@Test stringMatch(): " + result + " = " + true);
         assertTrue(true == result);
     }
+<<<<<<< HEAD:src/test/java/com/lctest_vsc/SolutionTest.java
 
     @Test
     public void plusOneTest () {
@@ -220,4 +221,44 @@ public class SolutionTest {
     }
 
 
+=======
+    
+    @Test
+    public void findMaxContSumTest() {
+        Solution sol = new Solution();
+        int result = sol.findMaxContSum(new int[]{-1, 0});
+        int trueResult = 0;
+        System.out.println("@Test findMaxContSum(): " + result + " = " + trueResult);
+        assertTrue(trueResult == result);       
+    
+        result = sol.findMaxContSum(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4});
+        trueResult = 6;
+        System.out.println("@Test findMaxContSum(): " + result + " = " + trueResult);
+        assertTrue(trueResult == result); 
+
+        result = sol.findMaxContSum(new int[]{1, 2, -1, -3, 4, -2, 2, 3, 1});
+        trueResult = 8;
+        System.out.println("@Test findMaxContSum(): " + result + " = " + trueResult);
+        assertTrue(trueResult == result); 
+    }    
+    
+    @Test
+    public void maxDegreeArrayTest() {
+        Solution sol = new Solution();
+        int result = sol.maxDegreeArray(new int[]{1});
+        int trueResult = 1;
+        System.out.println("@Test maxDegreeArray(): " + result + " = " + trueResult);
+        assertTrue(trueResult == result);       
+    
+        result = sol.maxDegreeArray(new int[]{1, 2, 2, 3, 1});
+        trueResult = 2;
+        System.out.println("@Test maxDegreeArray(): " + result + " = " + trueResult);
+        assertTrue(trueResult == result); 
+
+        result = sol.maxDegreeArray(new int[]{1, 2, 2, 3, 1, 4, 2});
+        trueResult = 6;
+        System.out.println("@Test maxDegreeArray(): " + result + " = " + trueResult);
+        assertTrue(trueResult == result); 
+    } 
+>>>>>>> 91507c5f538079afcf940a46ec548c972a8aeb25:src/test/java/com/lctest/SolutionTest.java
 }
